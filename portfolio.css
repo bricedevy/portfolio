@@ -1,0 +1,350 @@
+/* =========================================
+   FOND DU SITE + FILTRE SOMBRE
+========================================= */
+
+body {
+  background: url("OIP.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 20, 35, 0.82); /* filtre bleu foncé */
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+/* =========================================
+   TITRES ET CARTES
+========================================= */
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-card,
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #9ec5ff !important;
+}
+
+/* =========================================
+   IMAGES DE PROFIL
+========================================= */
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+}
+
+/* =========================================
+   EDUCATION — PUCE ANIMÉE
+========================================= */
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.edu-item .bullet {
+  width: 15px;
+  height: 15px;
+  background: #00aaff;
+  border-radius: 50%;
+  animation: pulseMove 1.8s infinite ease-in-out;
+}
+
+@keyframes pulseMove {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+/* =========================================
+   EXPERIENCE — TIMELINE ALTERNÉE
+========================================= */
+
+.timeline {
+  position: relative;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #0e3b5a;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  width: 46%;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item.left {
+  float: left;
+  clear: both;
+  transform: translateX(-20px);
+}
+
+.timeline-item.right {
+  float: right;
+  clear: both;
+  transform: translateX(20px);
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  background: #00aaff;
+  border-radius: 50%;
+  border: 3px solid #0a1a2a;
+}
+
+.timeline-item.left::after {
+  right: -35px;
+}
+
+.timeline-item.right::after {
+  left: -35px;
+}
+
+/* =========================================
+   COMPETENCES — DEFILEMENT HORIZONTAL
+========================================= */
+
+.skills-slider {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+/* masque la barre de scroll */
+.skills-slider::-webkit-scrollbar {
+  height: 0px;
+}
+
+
+.skills-track {
+  display: flex;
+  gap: 40px;
+  animation: slideLeft 18s linear infinite;
+}
+.skills-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.skills-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 10px;
+
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.skills-arrow:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.skills-arrow.left {
+  left: -5px;
+}
+
+.skills-arrow.right {
+  right: -5px;
+}
+
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  background: rgba(255,255,255,0.08);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.skill img {
+  width: 30px;
+}
+
+
+@keyframes slideLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* =========================================
+   PROJETS — CAROUSEL CSS (VERSION FINALE)
+========================================= */
+/* PROJETS — Mise en page compacte */
+
+#projets {
+  color: #fff;
+}
+
+.projet-slide {
+  min-height: 260px;
+  padding: 15px;
+}
+
+.projet-slide img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* flèches */
+#projets .carousel-control-prev-icon,
+#projets .carousel-control-next-icon {
+  filter: drop-shadow(0 0 4px #000);
+}
+
+/* petits points si un jour tu ajoutes des indicators */
+#projets .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background-color: white !important;
+}
+
+/* =========================================
+   REALISATIONS
+========================================= */
+
+#realisations img {
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+#contact ul li {
+  margin-bottom: 8px;
+}
+
+#contact .btn {
+  width: 100%;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer-dark {
+  background: #00101f;
+  color: #fff;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    width: 100%;
+    float: none;
+    transform: translateX(0);
+    margin-left: 30px;
+  }
+
+  .timeline-item::after {
+    left: -30px !important;
+  }
+
+  .carousel-item {
+    height: 300px;
+  }
+
+  .skills-track {
+    animation-duration: 25s;
+  }
+}

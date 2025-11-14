@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — Brice Devy</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+
+  <!-- 🔵 NAVIGATION FIXE -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+      <a class="navbar-brand fw-bold" href="#accueil">Brice Devy</a>
+
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">ÉÉducation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#realisations">Réalisations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- 🔵 ACCUEIL -->
+  <header id="accueil" class="py-5">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+
+      <div class="col-md-4 text-center">
+        <img src="moi.jpg" class="profile-img rounded-circle shadow" alt="Photo de Brice Devy">
+      </div>
+
+      <div class="col-md-8">
+        <div class="card hero-card p-4">
+          <h1 class="fw-bold">Brice Devy TCHEFINDJIM DOMGUIA</h1>
+          <p class="lead">Étudiant en Informatique Appliquée (coop)</p>
+
+          <div class="d-flex flex-column flex-md-row gap-3 mt-4">
+
+            <a href="#projets" class="btn btn-primary btn-lg flex-fill">
+              Voir mes projets
+            </a>
+
+            <a href="CV_Brice_Devy.pdf" class="btn btn-outline-light btn-lg flex-fill" download>
+              Télécharger mon CV
+            </a>
+
+            <a href="#contact" class="btn btn-success btn-lg flex-fill">
+              Me contacter
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+  <!-- 🔵 PROFIL -->
+  <section id="PROFIL" class="py-5">
+    <div class="container">
+
+      <h2 class="section-title">PROFIL</h2>
+
+      <div class="card hero-card p-4">
+        <div class="row align-items-center">
+
+          <div class="col-md-8">
+            <h3>Résumé</h3>
+            <p>
+              Étudiant motivé, sérieux, passionné par le développement logiciel,
+              l’apprentissage machine et la cybersécurité.
+            </p>
+
+            <h3 class="mt-3">Qualités</h3>
+            <ul>
+              <li>Responsable, rigoureux, discipliné</li>
+              <li>Sens de l’analyse</li>
+              <li>Communication efficace</li>
+            </ul>
+
+            <h3 class="mt-3">Objectif</h3>
+            <p>
+              Acquérir de l’expérience en développement, cybersécurité,
+              analyse de données, DevOps, et contribuer à des projets
+              concrets et innovants.
+            </p>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <img src="profil.jpg" class="img-fluid rounded shadow-lg" alt="Photo profil">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🔵 ÉDUCATION -->
+  <section id="ÉDUCATION" class="py-5">
+    <div class="container">
+
+      <h2 class="section-title">ÉDUCATION</h2>
+
+      <div class="education-list">
+
+        <div class="edu-item card hero-card p-4">
+          <span class="bullet"></span>
+          <div>
+            <h3>Baccalauréat en Informatique Appliquée</h3>
+            <p>Université de Moncton — 2023 à aujourd’hui</p>
+          </div>
+        </div>
+
+        <div class="edu-item card hero-card p-4">
+          <span class="bullet"></span>
+          <div>
+            <h3>Diplômes forestiers</h3>
+            <ul>
+              <li>Technicien supérieur des eaux et forêts (2013–2015)</li>
+              <li>Inventaires forestiers (2017–2018)</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🔵 EXPÉRIENCE — TIMELINE ALTERNÉE -->
+  <section id="experience" class="py-5">
+    <div class="container">
+      <h2 class="section-title">EXPÉRIENCE PROFESSIONNELLE</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item left card hero-card p-4">
+          <h3>Support informatique — Université de Moncton</h3>
+          <p>Dépannage, configuration, Active Directory, gestion du parc informatique.</p>
+        </div>
+
+        <div class="timeline-item right card hero-card p-4">
+          <h3>Assistant forestier — Cameroun</h3>
+          <p>Analyse environnementale, SIGIF II, gestion de données terrain.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div style="clear: both;"></div>
+
+  <!-- 🔵 COMPÉTENCES -->
+<section id="competences" class="py-5">
+  <div class="container">
+    <h2 class="section-title">COMPÉTENCES</h2>
+
+    <div class="skills-wrapper">
+      
+      <!-- ◀️ Flèche gauche -->
+      <button class="skills-arrow left">‹</button>
+
+      <div class="skills-slider">
+        <div class="skills-track">
+
+          <div class="skill"><img src="html.png" alt=""> HTML</div>
+          <div class="skill"><img src="css.png" alt=""> CSS</div>
+          <div class="skill"><img src="bootstrap.png" alt=""> Bootstrap</div>
+          <div class="skill"><img src="cpp.png" alt=""> C++</div>
+          <div class="skill"><img src="python.png" alt=""> Python</div>
+          <div class="skill"><img src="linux.png" alt=""> Linux</div>
+          <div class="skill"><img src="windows.png" alt=""> Windows</div>
+          <div class="skill"><img src="active_directory.png" alt=""> Active Directory</div>
+          <div class="skill"><img src="azure.png" alt=""> Azure</div>
+          <div class="skill"><img src="jira.png" alt=""> Jira</div>
+          <div class="skill"><img src="confluence.png" alt=""> Confluence</div>
+          <div class="skill"><img src="git.png" alt=""> Git</div>
+          <div class="skill"><img src="github.png" alt=""> GitHub</div>
+          <div class="skill"><img src="office.png" alt=""> Microsoft Office</div>
+          <div class="skill"><img src="onedrive.png" alt=""> OneDrive</div>
+          <div class="skill"><img src="onenote.png" alt=""> OneNote</div>
+          <div class="skill"><img src="manageengine.png" alt=""> Manage Engine</div>
+
+        </div>
+      </div>
+
+      <!-- ▶️ Flèche droite -->
+      <button class="skills-arrow right">›</button>
+
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- 🔵 PROJETS (CAROUSEL CSS) -->
+<section id="projets" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">PROJETS</h2>
+
+    <div id="projetsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- PROJET 1 -->
+        <div class="carousel-item active">
+          <div class="row align-items-center projet-slide">
+            <div class="col-md-6">
+              <img src="projet_ml.jpg" class="img-fluid" alt="Projet apprentissage machine">
+            </div>
+            <div class="col-md-6 text-white">
+              <h3 class="text-center mb-3">INFO4301 — Apprentissage Machine</h3>
+              <p>
+                Modélisation prédictive utilisant un dataset UCI.<br>
+                Prétraitement, optimisation d’hyperparamètres et analyse comparative.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 2 -->
+        <div class="carousel-item">
+          <div class="row align-items-center projet-slide">
+            <div class="col-md-6">
+              <img src="paradigmes.jpg" class="img-fluid" alt="Projet paradigmes de programmation">
+            </div>
+            <div class="col-md-6 text-white">
+              <h3 class="text-center mb-3">INFO3205 — Paradigmes de Programmation</h3>
+              <p>
+                Implantation d’un même problème dans deux langages en exploitant
+                les paradigmes propres à chacun.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 3 -->
+        <div class="carousel-item">
+          <div class="row align-items-center projet-slide">
+            <div class="col-md-6">
+              <img src="dev_soft.jpg" class="img-fluid" alt="Projet développement logiciel">
+            </div>
+            <div class="col-md-6 text-white">
+              <h3 class="text-center mb-3">Développement logiciel</h3>
+              <p>
+                Module de gestion d’inventaire et système de tickets :
+                conception, logique métier et interface utilisateur.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Flèche projet précédent -->
+      <button class="carousel-control-prev" type="button"
+              data-bs-target="#projetsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Précédent</span>
+      </button>
+
+      <!-- Flèche projet suivant -->
+      <button class="carousel-control-next" type="button"
+              data-bs-target="#projetsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Suivant</span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- 🔵 RÉALISATIONS -->
+  <section id="realisations" class="py-5">
+    <div class="container">
+      <h2 class="section-title">RÉALISATIONS</h2>
+
+      <div class="row gy-4">
+
+        <div class="col-md-6">
+          <div class="card hero-card p-4">
+            <h4>Certificat de mérite académique</h4>
+            <p>Pour excellence académique à l’Université de Moncton.</p>
+            <a href="Certificat_de_mérite_Brice.pdf" target="_blank" class="btn btn-primary">Voir le certificat</a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card hero-card p-4">
+            <h4>Participation — Initiation à la vie canadienne</h4>
+            <img src="photo_attestation_participation.jpg" class="img-fluid rounded shadow" alt="">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🔵 CONTACT -->
+  <section id="contact" class="py-5">
+    <div class="container">
+
+      <h2 class="section-title">CONTACT</h2>
+
+      <div class="row gy-4">
+
+        <!-- Infos -->
+        <div class="col-md-6">
+          <div class="card hero-card p-4">
+
+            <h4>Mes coordonnées</h4>
+            <ul class="list-unstyled mt-3">
+              <li><strong>Téléphone :</strong> (506) 740-0405</li>
+              <li><strong>Email :</strong> ebt8860@umoncton.ca</li>
+              <li><strong>GitHub :</strong> github.com/bricedevy</li>
+              <li><strong>LinkedIn :</strong> www.linkedin.com/in/brice-tchefindjim-b61471183</li>
+            </ul>
+
+            <a href="CV_Brice_Devy.pdf" class="btn btn-primary mt-3" download>
+              Télécharger mon CV
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="col-md-6">
+          <div class="card hero-card p-4">
+            <form action="https://formsubmit.co/ebt8860@umoncton.ca" method="POST">
+
+              <input type="hidden" name="_captcha" value="false">
+
+              <div class="mb-3">
+                <label class="form-label">Nom</label>
+                <input type="text" name="nom" required class="form-control">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Courriel</label>
+                <input type="email" name="email" required class="form-control">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea rows="5" name="message" required class="form-control"></textarea>
+              </div>
+
+              <button class="btn btn-primary">Envoyer</button>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer-dark text-center py-3 mt-5">
+    <small>© 2025 Brice Devy — Tous droits réservés</small>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
